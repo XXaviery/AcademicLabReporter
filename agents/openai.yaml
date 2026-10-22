@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Lab Report Workflow"
+  short_description: "Create Chinese university lab reports in DOCX"
+  default_prompt: "Use $academic-lab-report-workflow to prepare a Chinese lab report from my materials."
