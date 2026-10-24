@@ -164,11 +164,13 @@ Keep the language's syntax and comment delimiters: for example `%` in MATLAB and
 - Latin code, numbers, and symbols: Times New Roman. Chinese comment text: `仿宋_GB2312`, with the existing FangSong fallback only if that font is unavailable.
 - All code and comments: 五号 / 10.5 pt, regular weight, explicitly black (`#000000`). Set script-specific font properties so Chinese comments do not inherit the Latin font and do not switch to a default monospace code font.
 - White background. Remove inherited paragraph/run shading, highlighting, syntax colors, and complete frames. Do not add syntax highlighting or top, bottom, right, or internal borders.
-- One thin light gray-blue vertical rule on the left of the code block, approximately `#A7B5C4`; use a thin paragraph border, such as 0.5 pt. Keep border settings and alignment consistent across the code paragraphs so the rule reads as one block edge, including across intentional blank source lines.
-- Paragraph spacing before and after: 0 pt. Use compact single line spacing with enough height for Chinese glyphs; check for clipping instead of inheriting the body's 1.5 spacing.
+- One light gray-blue vertical rule on the left of the code block, approximately `#A7B5C4`, with a 1 pt paragraph-border width. Keep border settings and alignment consistent across the code paragraphs so the thicker rule reads as one block edge, including across intentional blank source lines.
+- Code line spacing: exactly 1.2 times the normal line height, using Word's multiple-line spacing rather than a fixed point height. Do not inherit single or 1.5 spacing. Keep paragraph spacing before and after at 0 pt between source lines; the code-to-prose boundary below is the only exception.
 - Use a small, consistent left paragraph indent and clear the inherited two-character first-line indent. Preserve the source's own indentation separately; do not insert extra blank paragraphs as spacing.
 
 Keep the program label and parameter description as separate non-code paragraphs, attached to the beginning of the listing. A dedicated code paragraph style and reusable insertion helper should apply these settings consistently without changing ordinary body styles.
+
+When non-code text follows a listing, leave a half-line (0.5-line) gap between the final non-empty code line and the following text. Use paragraph spacing at that boundary, on either the last code paragraph or the following prose paragraph, without double-counting both. Specify the gap in line units where supported, not as 0.5 pt. Do not insert a blank source-code paragraph or alter the source text to manufacture spacing. End the left rule with the code; it must not continue beside the following prose or a synthetic spacer. Apply this gap only after the completed listing, not between its lines or at a page break inside a long listing, and do not add a trailing spacer when no text follows.
 
 ### Pagination and parameter comparisons
 
@@ -180,7 +182,7 @@ In a parameter comparison, preserve the baseline and change only the parameter o
 
 ### Verification
 
-For every listing, compare the editable text with its source or authorized variant, then inspect the rendered pages. Check line-to-paragraph mapping, indentation, comment syntax, labels, absence of filename-based labeling, 五号 / 10.5 pt fonts, black text, white background, the lone pale left rule, intact lines, and neighboring-page flow. Check that parameter differences are limited to the required observations. A screenshot cannot establish text editability, and saved paragraph properties alone cannot establish readable pagination.
+For every listing, compare the editable text with its source or authorized variant, then inspect the rendered pages. Check line-to-paragraph mapping, indentation, comment syntax, labels, absence of filename-based labeling, 五号 / 10.5 pt fonts, 1.2 multiple-line spacing, black text, white background, the single 1 pt pale left rule, the half-line gap before following prose, intact lines, and neighboring-page flow. Verify that internal paragraph spacing remains zero and that neither the border nor a spacer leaks into the prose. Check that parameter differences are limited to the required observations. A screenshot cannot establish text editability, and saved paragraph properties alone cannot establish readable pagination.
 
 ## Tables
 
