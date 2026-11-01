@@ -216,6 +216,8 @@ Choose vector drawing, code-based drawing, or image generation according to text
 
 Save generated figures in the confirmed output folder, by default `<project-root>/material/generate/`. Inspect the actual figures before insertion.
 
+For generated system/module block diagrams, read [the diagram structure guide](diagram-structure.md) and inspect its persistent user-provided image reference. The guide defines the preferred hierarchy, boundaries, module groups, signal labels, external interfaces, and checks. It supplements these general figure rules; it does not replace experiment evidence, caption numbering, or page-fit requirements.
+
 ### Figure content
 
 Keep diagrams restrained and academic. Use accurate nodes and connections, legible text inside its shapes, and no clipping, overflow, overlap, or blur. Avoid decorative styling and irrelevant task labels.

@@ -9,6 +9,7 @@ Skill 名称：`academic-lab-report-workflow`。规则文件以英文撰写，�
 - 根据实际实验和模板组织正文，保留实测证据与预期结果的区别。
 - 规范黑色标题、正文、三线表、图题、目录和真实 Word 页码域。
 - 使用可渲染公式，并逐图检查尺寸、可读性和页面留白。
+- 系统框图参考随附图片的分层结构：系统实线边界、模块虚线分组、内部功能框、标注信号的箭头和外部接口；内容根据实际实验确定。
 - 源代码以可编辑文本放入正文，使用五号（10.5 磅）字体、1.2 倍行距、白底和 1 磅浅灰蓝色左侧竖线；后接正文时留半行间距，保留语言语法、缩进和必要注释。
 - 父代理负责写作、生成、排版和修改，多个只读子代理并行审查内容、格式和语言，提供评分及修改建议。
 - 完成内部修正和复查后交付同一份最终 DOCX，不为常规步骤增加额外的对话确认。
@@ -42,4 +43,6 @@ git clone https://github.com/XXaviery/AcademicLabReporter.git $skillDir
 | [SKILL.md](SKILL.md) | 工作流、权限边界、文件管理和父子代理分工 |
 | [references/report-spec.md](references/report-spec.md) | 正文、字体、源代码、表格、图片、公式和页面检查规范 |
 | [references/review-protocol.md](references/review-protocol.md) | 并行审查、评分依据、修正及复查流程 |
+| [references/diagram-structure.md](references/diagram-structure.md) | 图像生成框图的参考结构、生成提示及检查要求 |
+| [assets/diagram-structure-reference.png](assets/diagram-structure-reference.png) | 用户提供的框图结构参考图 |
 | [agents/openai.yaml](agents/openai.yaml) | skill 的显示名称和默认调用提示词 |

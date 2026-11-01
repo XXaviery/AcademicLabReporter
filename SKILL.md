@@ -99,6 +99,8 @@ For DOCX production, use the available `documents:documents` workflow when appli
 
 Choose vector drawing, code-based drawing, or image generation for explanatory diagrams according to accuracy, editability, complexity, and available tools. Honor an explicitly requested tool. When using image generation, follow the available image-generation workflow.
 
+For image-generated system/module block diagrams, follow [the diagram structure guide](references/diagram-structure.md) and inspect its saved user reference before generation. Use the reference's system boundary, module grouping, functional blocks, labeled directional connections, and external interfaces; derive the actual modules and signals from this experiment rather than copying the reference's FPGA example. Apply the relevant visual conventions to other flowcharts without changing their process semantics.
+
 Render after the layout is finalized and after substantial layout changes. Inspect every final page at readable resolution, including pages made sparse by oversized images or excessive keep-with-next chains. Contact sheets are navigation aids, not substitutes for detailed inspection. Combine DOCX structure checks with visual inspection; neither properties alone nor screenshots alone prove full compliance.
 
 ## Delivery conditions
